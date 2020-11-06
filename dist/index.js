@@ -15797,9 +15797,9 @@ const serializers = {
         return `❗️ ${helpers_1.capitalize(item.payload.action)} issue #${item.payload.issue.number} in ${item.repo.name}`;
     },
     PullRequestEvent: item => {
-        const emoji = item.payload.action === "opened" ? "💪" : "❌";
+        const emoji = item.payload.action === "opened" ? "📖" : "❌";
         const line = item.payload.pull_request.merged
-            ? "🎉 Merged"
+            ? "♻️ Merged"
             : `${emoji} ${helpers_1.capitalize(item.payload.action)}`;
         return `${line} PR #${item.payload.pull_request.number} in ${item.repo.name}`;
     },
